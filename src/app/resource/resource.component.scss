@@ -1,0 +1,157 @@
+@import '../../styles.scss';
+
+.photo-content {
+    width: 100px;
+    height: 100px;
+    border-radius: 45%;
+
+    img {
+        border-radius: 45%;
+        -webkit-border-radius: 45%;
+        -moz-border-radius: 45%;
+        -ms-border-radius: 45%;
+        -o-border-radius: 45%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+    }
+
+}
+
+.photo-name {
+    background-color: $bgColorSecond;
+
+    input {
+        width: 400px;
+        margin-right: 10px;
+        background-color: $bgColorTh;
+    }
+
+    p {
+        background-color: $bgColorSecond;
+        margin-right: 10px;
+        color: $colorSecond;
+    }
+}
+
+.content {
+
+    // i{
+    //     background-color: hsl(210, 7%, 88%);
+    // }
+    a {
+        color: $textColor;
+    }
+
+    a:hover {
+        text-decoration: underline !important;
+    }
+
+    .content-left {
+        i {
+            color: $textBlue;
+        }
+    }
+}
+
+.content-bottom {
+    color: $colorSecond;
+}
+
+.content-left {
+    .box-left {
+        background-color: $bgColorSecond;
+
+        input {
+            width: 400px;
+            background-color: #F6F2F2;
+        }
+    }
+
+    .select-left {
+        position: absolute;
+        padding: 6px;
+        top: 40px;
+        right: 400px;
+        background-color: #E7E7E8;
+    }
+
+    .counter {
+        background-color: $bgColorTh;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        width: 250px;
+        // height: 10px;
+
+        .btn-right {
+            position: absolute;
+            top: 8px;
+            right: 10px;
+        }
+
+        .btn-left {
+            position: absolute;
+            top: 8px;
+            left: 10px;
+        }
+    }
+}
+
+p {
+    background-color: $bgColorSecond;
+    margin-right: 10px;
+    color: $colorSecond;
+}
+
+// Responsive
+@media screen and (max-width:600px) {
+    .photo-name {
+        background-color: $bgColorSecond;
+
+        input {
+            width: 200px;
+            margin-right: 10px;
+            background-color: $bgColorTh;
+        }
+
+        p {
+            background-color: $bgColorSecond;
+            margin-right: 10px;
+            color: $colorSecond;
+        }
+    }
+
+    .content-f-left {
+        button {
+            width: 50px;
+            font-size: 10px;
+        }
+    }
+
+    .content-left {
+        .box-left {
+            background-color: $bgColorSecond;
+
+            input {
+                width: 250px;
+                background-color: #F6F2F2;
+            }
+        }
+
+    }
+
+    .counter{
+        h4{
+            font-size: 15px;
+        }
+
+        .btn-right{
+            padding: 5px;
+        }
+        .btn-left{
+            padding: 5px;
+        }
+    }
+
+}

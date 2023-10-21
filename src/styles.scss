@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+$bgColor:#DFE1E3;
+$bgColorSecond:#fff;
+$bgColorTh:#F4EEEE;
+$textColor:#000000;
+$colorSecond: #92A1AD;
+$colorTh: #1C1C28;
+$textBlue: blue;
+
+
+body{
+    padding: 0;
+    margin: 0;
+    *{
+        font-family: cursive;
+        direction: rtl;
+        background-color: $bgColor;
+    }
+}

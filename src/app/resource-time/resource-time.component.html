@@ -1,0 +1,183 @@
+<div class="m-4 p-2 bg-body rounded-3">
+    
+    <div class="d-flex justify-content-between align-items-center bg-body cont-item">
+        <div class="bg-body">
+            <h4 class="bg-body ">{{textOne}}</h4>
+            <p class="bg-body text-muted">{{textTwo}}</p>
+        </div>
+        <div class="bg-body ms-3 cont-btn">
+            <button class="btn btn-light mx-2">{{btnTextOne}}</button>
+            <button class="btn btn-primary">{{btnTextTwo}}</button>
+        </div>
+    </div>
+
+    <div class="bg-body my-3 cont-inp">
+        <ng-toggle [value]="true" [color]="{ unchecked: '#939da2', checked: '#0771DE'}" class="ms-4"
+            (change)="showHideDiv1($event)"></ng-toggle>
+            {{day1}}
+        <button id="btn" class="btn btn-light fa-1x " *ngIf="visible1" (click)="addInput1()">+</button>
+
+        <div class="bg-body cont-chiled mx-4 d-flex align-items-center p-4 position-relative" *ngFor="let arr of inputTime1 ; let i = index ">
+            <span class="bg-body text-muted me-4 " *ngIf="visible1">{{startTime}}</span>
+            <input type="time" class="form-control  mx-4 mt-2" *ngIf="visible1">
+    
+            <span class="bg-body" *ngIf="visible1">:</span>
+    
+            <span class="bg-body text-muted me-4" *ngIf="visible1">{{EndTime}}</span>
+            <input type="time" name="" id="" class="form-control  mx-4 mt-2" *ngIf="visible1">
+    
+            <button id="btn" class="btn btn-light fa-1x" *ngIf="visible1" (click)="removeInput1(i)">-</button>
+            <i class="fa-regular fa-copy mx-2"></i>
+
+        </div>   
+        <div *ngFor="let value of inputTime1" class="bg-body mx-2 d-flex align-items-center ">
+            {{value.value}}
+        </div>
+    </div>
+
+    <div class="bg-body my-3">
+        <ng-toggle [value]="true" [color]="{ unchecked: '#939da2', checked: '#0771DE'}" class="ms-4"
+            (change)="showHideDiv2($event)"></ng-toggle>
+            {{day2}}
+        <button id="btn" class="btn btn-light fa-1x " *ngIf="visible2" (click)="addInput2()">+</button>
+
+        <div class="bg-body mx-4 d-flex align-items-center p-4 position-relative" *ngFor="let arr of inputTime2 ; let i = index ">
+            <span class="bg-body text-muted me-4 " *ngIf="visible2">{{startTime}}</span>
+            <input type="time" class="form-control  mx-4 mt-2" *ngIf="visible2">
+    
+            <span class="bg-body " *ngIf="visible2">:</span>
+    
+            <span class="bg-body text-muted me-4" *ngIf="visible2">{{EndTime}}</span>
+            <input type="time" name="" id="" class="form-control  mx-4 mt-2" *ngIf="visible2">
+    
+            <button id="btn" class="btn btn-light fa-1x" *ngIf="visible2" (click)="removeInput2(i)">-</button>
+            <i class="fa-regular fa-copy mx-2"></i>
+
+        </div>   
+        <div *ngFor="let value of inputTime2" class="bg-body mx-2 d-flex align-items-center ">
+            {{value.value}}
+        </div>
+    </div>
+
+    <div class="bg-body my-3">
+        <ng-toggle [value]="true" [color]="{ unchecked: '#939da2', checked: '#0771DE'}" class="ms-4"
+            (change)="showHideDiv3($event)"></ng-toggle>
+            {{day3}}
+        <button id="btn" class="btn btn-light fa-1x " *ngIf="visible3" (click)="addInput3()">+</button>
+
+        <div class="bg-body mx-4 d-flex align-items-center p-4 position-relative" *ngFor="let arr of inputTime3 ; let i = index ">
+            <span class="bg-body text-muted me-4 " *ngIf="visible3">{{startTime}}</span>
+            <input type="time" class="form-control  mx-4 mt-2" *ngIf="visible3">
+    
+            <span class="bg-body " *ngIf="visible3">:</span>
+    
+            <span class="bg-body text-muted me-4" *ngIf="visible3">{{EndTime}}</span>
+            <input type="time" name="" id="" class="form-control  mx-4 mt-2" *ngIf="visible3">
+    
+            <button id="btn" class="btn btn-light fa-1x" *ngIf="visible3" (click)="removeInput3(i)">-</button>
+            <i class="fa-regular fa-copy mx-2"></i>
+
+        </div>   
+        <div *ngFor="let value of inputTime3" class="bg-body mx-2 d-flex align-items-center ">
+            {{value.value}}
+        </div>
+    </div>
+
+    <div class="bg-body my-3">
+        <ng-toggle [value]="true" [color]="{ unchecked: '#939da2', checked: '#0771DE'}" class="ms-4"
+            (change)="showHideDiv4($event)"></ng-toggle>
+            {{day4}}
+        <button id="btn" class="btn btn-light fa-1x " *ngIf="visible4" (click)="addInput4()">+</button>
+
+        <div class="bg-body mx-4 d-flex align-items-center p-4 position-relative" *ngFor="let arr of inputTime4 ; let i = index ">
+            <span class="bg-body text-muted me-4 " *ngIf="visible4">{{startTime}}</span>
+            <input type="time" class="form-control  mx-4 mt-2" *ngIf="visible4">
+    
+            <span class="bg-body " *ngIf="visible4">:</span>
+    
+            <span class="bg-body text-muted me-4" *ngIf="visible4">{{EndTime}}</span>
+            <input type="time" name="" id="" class="form-control  mx-4 mt-2" *ngIf="visible4">
+    
+            <button id="btn" class="btn btn-light fa-1x" *ngIf="visible4" (click)="removeInput4(i)">-</button>
+            <i class="fa-regular fa-copy mx-2"></i>
+
+        </div>   
+        <div *ngFor="let value of inputTime4" class="bg-body mx-2 d-flex align-items-center ">
+            {{value.value}}
+        </div>
+    </div>
+
+    <div class="bg-body my-3">
+        <ng-toggle [value]="true" [color]="{ unchecked: '#939da2', checked: '#0771DE'}" class="ms-4"
+            (change)="showHideDiv5($event)"></ng-toggle>
+            {{day5}}
+        <button id="btn" class="btn btn-light fa-1x " *ngIf="visible5" (click)="addInput5()">+</button>
+
+        <div class="bg-body mx-4 d-flex align-items-center p-4 position-relative" *ngFor="let arr of inputTime5 ; let i = index ">
+            <span class="bg-body text-muted me-4 " *ngIf="visible5">{{startTime}}</span>
+            <input type="time" class="form-control  mx-4 mt-2" *ngIf="visible5">
+    
+            <span class="bg-body " *ngIf="visible5">:</span>
+    
+            <span class="bg-body text-muted me-4" *ngIf="visible5">{{EndTime}}</span>
+            <input type="time" name="" id="" class="form-control  mx-4 mt-2" *ngIf="visible5">
+    
+            <button id="btn" class="btn btn-light fa-1x" *ngIf="visible5" (click)="removeInput5(i)">-</button>
+            <i class="fa-regular fa-copy mx-2"></i>
+
+        </div>   
+        <div *ngFor="let value of inputTime5" class="bg-body mx-2 d-flex align-items-center ">
+            {{value.value}}
+        </div>
+    </div>
+
+    <div class="bg-body my-3">
+        <ng-toggle [value]="true" [color]="{ unchecked: '#939da2', checked: '#0771DE'}" class="ms-4"
+            (change)="showHideDiv6($event)"></ng-toggle>
+            {{day6}}
+        <button id="btn" class="btn btn-light fa-1x " *ngIf="visible6" (click)="addInput6()">+</button>
+
+        <div class="bg-body mx-4 d-flex align-items-center p-4 position-relative" *ngFor="let arr of inputTime6 ; let i = index ">
+            <span class="bg-body text-muted me-4 " *ngIf="visible6">{{startTime}}</span>
+            <input type="time" class="form-control  mx-4 mt-2" *ngIf="visible6">
+    
+            <span class="bg-body " *ngIf="visible6">:</span>
+    
+            <span class="bg-body text-muted me-4" *ngIf="visible6">{{EndTime}}</span>
+            <input type="time" name="" id="" class="form-control  mx-4 mt-2" *ngIf="visible6">
+    
+            <button id="btn" class="btn btn-light fa-1x" *ngIf="visible6" (click)="removeInput6(i)">-</button>
+            <i class="fa-regular fa-copy mx-2"></i>
+
+        </div>   
+        <div *ngFor="let value of inputTime6" class="bg-body mx-2 d-flex align-items-center ">
+            {{value.value}}
+        </div>
+    </div>
+
+    <div class="bg-body my-3">
+        <ng-toggle [value]="true" [color]="{ unchecked: '#939da2', checked: '#0771DE'}" class="ms-4"
+            (change)="showHideDiv7($event)"></ng-toggle>
+            {{day7}}
+        <button id="btn" class="btn btn-light fa-1x " *ngIf="visible7" (click)="addInput7()">+</button>
+
+        <div class="bg-body mx-4 d-flex align-items-center p-4 position-relative" *ngFor="let arr of inputTime7 ; let i = index ">
+            <span class="bg-body text-muted me-4 " *ngIf="visible7">{{startTime}}</span>
+            <input type="time" class="form-control  mx-4 mt-2" *ngIf="visible7">
+    
+            <span class="bg-body " *ngIf="visible7">:</span>
+    
+            <span class="bg-body text-muted me-4" *ngIf="visible7">{{EndTime}}</span>
+            <input type="time" name="" id="" class="form-control  mx-4 mt-2" *ngIf="visible7">
+    
+            <button id="btn" class="btn btn-light fa-1x" *ngIf="visible7" (click)="removeInput7(i)">-</button>
+            <i class="fa-regular fa-copy mx-2"></i>
+
+        </div>   
+        <div *ngFor="let value of inputTime7" class="bg-body mx-2 d-flex align-items-center ">
+            {{value.value}}
+        </div>
+    </div>
+</div>
+
+

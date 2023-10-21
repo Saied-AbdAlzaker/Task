@@ -1,0 +1,28 @@
+.input-time{
+    input{
+        width: 300px;
+    }
+}
+
+
+// Responsive
+@media screen and (max-width:600px) {
+    .cont-item{
+        font-size: 10px;
+        h4{
+            font-size: 10px;
+        }
+        .cont-btn{
+            button {
+                    font-size: 10px;
+                    padding: 3px;
+                }
+        }
+    }
+
+    .cont-chiled{
+        display: flex;
+        flex-direction: column;
+    }
+
+}

@@ -1,0 +1,89 @@
+<div class="content d-flex justify-content-between">
+    <div class="content-right m-3">
+        <i class="fa-solid fa-arrow-right"></i>
+        <a class="mx-2 text-decoration-none">{{createResource}}</a>
+    </div>
+    <div class="content-f-left m-3">
+        <ng-toggle [value]="true" [color]="{ unchecked: '#939da2', checked: '#0771DE'}" class="ms-4"></ng-toggle>
+        <button class="btn btn-dark mx-2">{{saveResource}}</button>
+        <button class="btn btn-outline-light text-danger border border-danger-subtle"><i
+                class="fa-solid fa-trash-can"></i>{{deleteResource}}</button>
+    </div>
+</div>
+
+<div class="row gx-0">
+    <div class="col-md-6 ">
+        <div class="d-flex align-items-center bg-body rounded-3 mx-4 p-5">
+            <div class="photo-content position-relative">
+                <label for="upload" class="btn btn-success"><i class="fa-regular fa-file-image"></i></label>
+                <img [src]="url" alt="">
+                <input type="file" hidden id="upload" (change)="getImg($event)">
+            </div>
+            <div class="photo-name">
+                <p>{{nameResource}}</p>
+                <input type="text" class="form-control">
+            </div>
+        </div>
+
+        <div class="content-bottom d-flex align-items-center bg-body rounded-3 m-4 p-3">
+            <label class="mx-5 bg-body">{{chooseResource}}</label>
+            <input type="radio" name="choose" id="day">
+            <label class="mx-2 bg-body">{{selectOneResource}}</label>
+            <input type="radio" name="choose" id="more">
+            <label class="mx-2 bg-body">{{selectMoreResource}}</label>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-sm-12">
+        <div class="content-left d-flex align-items-center bg-body mx-4 p-2 rounded-top-4">
+            <div class="box-left position-relative">
+                <p class="mx-5 bg-body">{{emptyResource}}</p>
+                <input type="number" class="form-control ">
+                <select class="w-25 select-left text-center">
+                    <optgroup>
+                        <option *ngFor="let c of countOption">{{c}}</option>
+                    </optgroup>
+                </select>
+            </div>
+        </div>
+        <div class="content-left bg-body mx-4 p-2 ">
+            <p class="mx-2 bg-body">{{timeResource}}</p>
+            <div class="d-flex align-items-center bg-body">
+                <input type="radio" name="choose" id="one" class="mx-3" (change)="hideDiv($event)">
+                <i class="fa-solid fa-cube"></i>
+                <label class="mx-2 bg-body">{{timeSevice}}</label>
+                <input type="radio" name="choose" id="more" class="mx-3" (change)="showDiv($event)">
+                <i class="fa-regular fa-clock"></i>
+                <label class="mx-2 bg-body">{{fixedTime}}</label>
+
+                <ng-container *ngIf="visible">
+                    <div class="counter position-relative rounded-4">
+                        <button id="btn" class="btn btn-primary fs-5 text-center btn-right"
+                            (click)="count('+')">+</button>
+                        <h4 class="text-center p-3 rounded-3">{{counter}} {{min}}</h4>
+                        <button id="btn" class="btn btn-primary fs-5 text-center btn-left"
+                            (click)="count('-')">-</button>
+                    </div>
+                </ng-container>
+
+            </div>
+        </div>
+        <div class="content-left bg-body mx-4 rounded-bottom-4">
+            <p class="mx-3 bg-body">{{selectMore}}<i class="fa-solid fa-circle-info"></i></p>
+            <div class="d-flex align-items-center bg-body pb-2">
+                <input type="radio" name="choose-one" id="more" class="mx-3" (change)="hideDivTwo($event)">
+                <i class="fa-solid fa-user-large"></i>
+                <label class="mx-1 bg-body">{{selectOne}}</label>
+                <input type="radio" name="choose-one" id="more" class="mx-3" (change)="showDivTwo($event)">
+                <i class="fa-solid fa-user-group"></i>
+                <label class="mx-1 bg-body">{{selectTwo}}</label>
+
+                <div class="bg-body d-flex" *ngIf="visibleTwo">
+                    <input type="number" name="" id="" class="w-50 text-center form-control mx-2"> 
+                        {{textInput}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
